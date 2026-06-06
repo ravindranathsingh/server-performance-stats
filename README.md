@@ -4,7 +4,7 @@ A Bash-based system monitoring script that provides key server health metrics.
 
 ## Project URL
 
-* https://github.com/ravindranathsingh/server-performance-stats.git
+* [https://github.com/ravindranathsingh/server-performance-stats.git](https://roadmap.sh/projects/server-stats)
 
 ## Features
 

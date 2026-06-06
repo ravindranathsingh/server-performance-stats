@@ -47,6 +47,7 @@ Run all statistics:
 Or, if command-line options are supported:
 
 ```bash
+./color.sh
 ./server-stats.sh cpu
 ./server-stats.sh memory
 ./server-stats.sh disk
@@ -58,34 +59,71 @@ Or, if command-line options are supported:
 ## Sample Output
 
 ```text
-Total CPU Usage:
-6.2%
+vagrant@linuxVm:/vagrant/scripts$ ./server-stats.sh 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++ Server Stats ++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1. CPU Usage
+2. Memory Usage
+3. Disk Usage
+4. Top Process By CPU Usage
+5. Top Process by Memory Usage
+6. All Stats
+Choose an option:6
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++ Total CPU Usage +++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Total Memory:
-Used Memory : 47 MB (4.78%)
-Free Memory : 874 MB (89.52%)
+CPU Usage is:100%
 
-Disk Usage:
-Used Disk : 5.2 GB (28%)
-Free Disk : 14.3 GB (72%)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++ Total Memory Usage ++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Top 5 Processes by CPU Usage:
-PID     COMMAND         %CPU
-1023    java            25.0
-2045    python          15.0
+Total Memory     : 3.82 GB
+Used Memory      : 0.19 GB (4.86%)
+Free Memory      : 2.16 GB (56.53%)
+Available Memory : 3.37 GB (88.14%)
 
-Top 5 Processes by Memory Usage:
-PID     COMMAND         %MEM
-1234    java            15.2
-5678    postgres         8.1
-```
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++ Total Disk Usage ++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Total Disk  :  39G
+Used Disk   :  2.1G(6%)
+Free Disk   :  37G(94%)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++ Top 5 process by CPU Usage +++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    PID COMMAND         %CPU
+  17059 systemd          0.4
+      1 systemd          0.2
+  17145 bash             0.2
+  17164 server-stats.sh  0.2
+   4718 kworker/0:0-eve  0.1
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++ Top 5 process by Memory Usage ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    PID COMMAND         %MEM
+   5384 snapd            0.8
+  15132 multipathd       0.6
+  15148 unattended-upgr  0.5
+  15770 packagekitd      0.5
+  15125 networkd-dispat  0.4
 
 ## Project Structure
 
 ```text
+vagrant@linuxVm:/vagrant/scripts$ tree
 .
-├── server-stats.sh
-└── README.md
+├── color.sh
+└── server-stats.sh
+
+0 directories, 2 files
 ```
 
 ## Learning Objectives
